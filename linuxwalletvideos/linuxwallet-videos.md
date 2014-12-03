@@ -10,6 +10,9 @@
 
 [linuxwallet-videos-offline-toc.html](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet-videos-offline-toc.html "table of contents, for offline viewing")  
 
+[linuxwallet-install-all-commands.txt](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet-install-all-commands.txt "most of the commands used in the videos")  
+
+
 All rights reserved.  
 Copyright 2014 DrAKoin.  
 For personal use, no publication.   

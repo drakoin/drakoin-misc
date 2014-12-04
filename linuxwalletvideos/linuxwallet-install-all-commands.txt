@@ -1,0 +1,113 @@
+
+# upgrade all installed packages to newest:
+sudo apt-get update; sudo apt-get upgrade
+
+# prep the system to be able to git & compile & build
+sudo apt-get install git make automake build-essential libboost-all-dev nano screen -y
+
+# might be necessary for other tools & distros (for this wallet on Debian 7 it is not):
+# apt-get install yasm binutils libcurl4-openssl-dev openssl libssl-dev 
+
+# compiling needs a large SWAP file:
+sudo dd if=/dev/zero of=/swapfile bs=60M count=16
+sudo mkswap /swapfile; sudo swapon /swapfile
+
+
+# For some reason, bitcoind is stuck in an old database version db4.8, 
+# which is not supported by newest ubuntu / debian anymore, 
+# so we get it manually:
+
+# Get db4.8 source, compile and install
+wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
+tar zxf db-4.8.30.NC.tar.gz
+cd db-4.8.30.NC/build_unix; ../dist/configure --enable-cxx
+make; 
+
+# now that db48 is built, we can install it:
+sudo make install
+cd ../..
+
+# DB4.8 is installed, now delete all sources
+rm -Rf db-4.8.30.NC*   # delete the sources, -f because of 'remove write-protected ...' questions
+
+# Link the libraries 
+sudo ln -s /usr/local/BerkeleyDB.4.8/lib/libdb-4.8.so /usr/lib/libdb-4.8.so
+sudo ln -s /usr/local/BerkeleyDB.4.8/lib/libdb_cxx-4.8.so /usr/lib/libdb_cxx-4.8.so
+
+# SERVER IS PREPARED. FROM HERE ON YOU CAN INSTALL WALLETS
+
+
+# where to find db4.8 tell your system  (needs to be redone after reboot)
+export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.4.8/include"
+export BDB_LIB_PATH="/usr/local/BerkeleyDB.4.8/lib"
+
+# clone the sources from github
+git clone https://github.com/MZN2014/MZNsource
+
+# go into src folder
+cd MZNsource/src
+
+# make for unix:
+make -f makefile.unix USE_UPNP=-
+
+# this should NOT happen if everything were perfect.
+# but ... we find a solution:
+
+# the problem can be solved by making the directory accessible to everyone:
+chmod a+x leveldb/build_detect_platform
+
+# make continues where it left off:
+make -f makefile.unix USE_UPNP=-
+
+# the $PATH contains locations for all executable programs:
+echo $PATH
+
+# copy binary into a folder in $PATH:
+sudo cp ./mazond /usr/local/bin
+
+
+echo 
+echo COMPILING READY! NOW CONFIGURATION!
+echo
+
+
+
+
+# go to homefolder:
+cd ~
+
+
+# start wallet results in warning about password:
+mazond
+
+
+# configuration file:
+nano ~/.Mazon/Mazon.conf
+
+listen=1
+server=1
+daemon=1
+testnet=0
+rpcuser=LOCALUSER
+rpcpassword=VERYSECURESUPERLONGSUPERSAFEPASSWORD
+
+
+# restrict access to only this user:
+chmod 700 ~/.Mazon/Mazon.conf
+chmod 700 ~/.Mazon
+
+# just checking
+ls -la ~/.Mazon
+
+
+
+# start wallet and return to commandline:
+mazond &
+
+
+# see that/if it is syncing
+mazond getinfo
+
+# mining info
+mazond getmininginfo
+

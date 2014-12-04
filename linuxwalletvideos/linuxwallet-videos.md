@@ -7,7 +7,8 @@ You can download them all with the [SaveFrom.net-Helper](http://en.savefrom.net/
 
 [linuxwallet-videos-offline-toc.html](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet-videos-offline-toc.html "table of contents, for offline viewing")  
 
-[linuxwallet-install-all-commands.txt](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet-install-all-commands.txt "most of the commands used in the videos")  
+[the commands](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet-install-all-commands.txt "most of the commands used in the videos")  
+You want to have a look at the *Linux manpages* for each command, to learn more: i.e. http://linux.die.net/man/ or http://man.he.net/ or https://www.kernel.org/doc/man-pages/
 
 All rights reserved.  
 Copyright 2014 DrAKoin.  

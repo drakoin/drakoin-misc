@@ -1,4 +1,10 @@
 
+# See the video playlist at 
+# https://www.youtube.com/watch?v=aUbXEGD6Mt4&list=PL9xqXHMXrXIz59d2Unthit1D_WL1rS75W
+
+#######################################################################################
+
+
 # upgrade all installed packages to newest:
 sudo apt-get update; sudo apt-get upgrade
 
@@ -93,7 +99,7 @@ rpcpassword=VERYSECURESUPERLONGSUPERSAFEPASSWORD
 
 
 # restrict access to only this user:
-chmod 700 ~/.Mazon/Mazon.conf
+chmod 600 ~/.Mazon/Mazon.conf
 chmod 700 ~/.Mazon
 
 # just checking

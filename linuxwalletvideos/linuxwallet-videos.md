@@ -1,17 +1,13 @@
 # Linux wallet install videos  
 ## by DrAKoin
 
-[linuxwallet_pt1_prepOS.webm](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet_pt1_prepOS.webm "1st video")  
-[linuxwallet_pt2_db48_make.webm](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet_pt2_db48_make.webm "2nd video")  
-[linuxwallet_pt3_db48_make-install.webm](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet_pt3_db48_make-install.webm "3rd video")  
-[linuxwallet_pt4_wallet_make-pt1.webm](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet_pt4_wallet_make-pt1.webm "4th video")  
-[linuxwallet_pt5_wallet_make-pt2.webm](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet_pt5_wallet_make-pt2.webm "5th video")  
-[linuxwallet_pt6_wallet_confAndRun.webm](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet_pt6_wallet_confAndRun.webm "6th video")  
+[Youtube Playlist with all 6 videos](https://www.youtube.com/watch?v=aUbXEGD6Mt4&list=PL9xqXHMXrXIz59d2Unthit1D_WL1rS75W "open hidden Youtube Playlist")  
+
+You can download them all with the [SaveFrom.net-Helper](http://en.savefrom.net/user.php "browser extension") browser extension  
 
 [linuxwallet-videos-offline-toc.html](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet-videos-offline-toc.html "table of contents, for offline viewing")  
 
 [linuxwallet-install-all-commands.txt](https://raw.githubusercontent.com/drakoin/drakoin-misc/master/linuxwalletvideos/linuxwallet-install-all-commands.txt "most of the commands used in the videos")  
-
 
 All rights reserved.  
 Copyright 2014 DrAKoin.  
